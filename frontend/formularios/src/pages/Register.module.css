@@ -1,3 +1,125 @@
-.teste {
-  color: aqua;
+.container {
+  position: relative;
+  width: 500px;
+  height: 550px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(29, 49, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_container {
+  width: 100%;
+  padding: 40px;
+}
+
+.input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #000;
+  margin: 30px 0;
+}
+
+.input_box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #000;
+  pointer-events: none;
+}
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input_box input:focus ~ label,
+.input_box input:valid ~ label {
+  top: -5px;
+}
+
+.icon {
+  color: white;
+  position: absolute;
+  right: 8px;
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+.agree {
+  font-size: 1em;
+  color: rgb(175, 231, 186);
+  font-weight: 600;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.agree label input {
+  accent-color: #4c7962;
+  margin-right: 3px;
+}
+
+.agree a {
+  color: rgb(175, 231, 186);
+  text-decoration: none;
+}
+
+.agree a:hover {
+  text-decoration: underline;
+}
+
+.btn_register {
+  width: 100%;
+  height: 45px;
+  background: rgb(53, 116, 65);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.btn_register:hover {
+  background: rgb(175, 231, 186);
+  transition: 0.9s;
+}
+
+.login {
+  font-size: 0.9em;
+  color: rgb(175, 231, 186);
+  text-align: center;
+  font-weight: 600;
+  margin: 25px 0 10px;
+}
+
+.login p a {
+  color: rgb(175, 231, 186);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login a {
+  margin-left: 5px;
+}
+
+.login p a:hover {
+  text-decoration: underline;
 }

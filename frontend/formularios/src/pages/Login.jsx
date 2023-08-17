@@ -5,7 +5,7 @@ import styles from "../pages/Login.module.css";
 import { FiMail } from "react-icons/fi";
 import { FiLock } from "react-icons/fi";
 
-const Login = () => {
+const Login = ({ currentPageRegister }) => {
   return (
     <div className={styles.container}>
       <div className={styles.form_container}>
@@ -15,13 +15,7 @@ const Login = () => {
             <span className={styles.icon}>
               <FiMail />
             </span>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="exemplo@gmail.com"
-              required
-            />
+            <input type="email" id="email" name="email" required />
             <label htmlFor="email">Email</label>
           </div>
 
@@ -29,13 +23,7 @@ const Login = () => {
             <span className={styles.icon}>
               <FiLock />
             </span>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder=""
-              required
-            />
+            <input type="password" id="password" name="password" required />
             <label htmlFor="password">Password</label>
           </div>
 
@@ -51,7 +39,7 @@ const Login = () => {
           <div className={styles.register}>
             <p>
               Don't have an account?
-              <a href="#" className={styles.register_link}>
+              <a onClick={currentPageRegister} href="#">
                 Register
               </a>
             </p>
